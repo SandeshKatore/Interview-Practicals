@@ -4,4 +4,14 @@ RUN apt -get update -y   //updating os
 COPY <file_name>
 RUN apt install nginx -y
 EXPOSE 80      //open port of container
-CMD ["/usr/sbin/nginx"]
+CMD ["/usr/sbin/nginx"]           
+
+docker build -t <image_name> .      //create docker image from docker file
+docker run -it --name <container_image> <image_name> /bin/bash
+docker images  //to see images
+docker ps  //it shows all starting containers
+docker ps -a -q //it shows all starting as well as stopped containers 
+docker ps/stop/attach/rm $(docker ps -a -q)
+docker inspect <container_name)  //details of containers
+docker ps -a -q | grep Exited    //it will show all stopped containers
+
