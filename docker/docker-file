@@ -1,1 +1,7 @@
-
+FROM ubuntu:latest  //base os
+MAINTAINER/LABEL sandesh katore/ email id
+RUN apt -get update -y   //updating os
+COPY <file_name>
+RUN apt install nginx -y
+EXPOSE 80      //open port of container
+CMD ["/usr/sbin/nginx"]
