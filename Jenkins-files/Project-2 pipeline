@@ -24,7 +24,7 @@ pipeline {
             steps{
                 script{
                    withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
-                   sh 'docker login -u youngminds73 -p ${dockerhubpwd}'
+                   sh 'docker login -u sandeshkatore -p ${dockerhubpwd}'                                 //congigure passwd of dockerhub in jenkins in credentials
 
 }
                    sh 'docker push youngminds73/devops-integration'
